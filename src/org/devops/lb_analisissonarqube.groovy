@@ -10,8 +10,8 @@ def analisisSonar(gitName){
     if(scannerHome){
         withSonarQubeEnv('sonar-scanner'){
             sh "${scannerHome}/bin/sonar-scanner \
-            -Dsonar.projectKey=${gitName} \
-            -Dsonar.projectName=${gitName} \
+            -Dsonar.projectKey=react-test-jenkinsfile \
+            -Dsonar.projectName=React Test Jenkinsfile} \
             -Dsonar.sources=${env.source} \
             -Dsonar.tests=src/__test__ \
             -Dsonar.exclusions='**/*.test.js' \
